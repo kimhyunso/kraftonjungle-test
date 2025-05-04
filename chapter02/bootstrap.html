@@ -36,7 +36,7 @@
       <hr class="my-4" />
       <p>
       </p>
-      <button class="btn btn-primary btn-lg" type="button">포스팅박스 열기</button>
+      <button class="btn btn-primary btn-lg" type="button" id="post-box" onclick="openclose()">포스팅박스 열기</button>
     </div>
     
     <div class="form">
@@ -154,5 +154,13 @@
     crossorigin="anonymous"
   ></script>
   <!-- 이 부분은 절대 지우지 마세요. -->
+
+  <script src="./script/jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      alert('페이지가 로딩되었습니다.');
+    });
+  </script>
+  <script src="./script/postbox.js"></script>
 </body>
 </html>
