@@ -1,0 +1,30 @@
+* {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#background {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    background-image: url("../img/Agesilaus-II-cover.jpg");
+    color: white;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    padding-top: 40px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.margin-auto {
+    width: 300px;
+    margin: auto;
+}
