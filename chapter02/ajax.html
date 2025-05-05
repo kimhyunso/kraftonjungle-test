@@ -31,17 +31,14 @@
                 data: {},
                 success: function(response) {
                     let rows = response['RealtimeCityAir']['row'];
-                    let name_list = rows.map(item => item['MSRSTE_NM']);
-                    let mise_list = rows.map(item => item['IDEX_MVL']);
-
-                    name_list.forEach((item, index) => {
+                    rows.map(item => ({'MSRSTE_NM' : item['MSRSTE_NM'], 'IDEX_MVL' : item['IDEX_MVL']}))
+                    .forEach(item => {
                         let tag;
-                        if (mise_list[index] >= 70) {
-                            tag = `<li class='red'>${item} : ${mise_list[index]}</li>`;
+                        if (item['IDEX_MVL'] >= 70) {
+                            tag = `<li class='red'>${item['MSRSTE_NM']} : ${item['IDEX_MVL']}</li>`;
                         } else {
-                            tag = `<li>${item} : ${mise_list[index]}</li>`;
+                            tag = `<li>${item['MSRSTE_NM']} : ${item['IDEX_MVL']}</li>`;
                         }
-                        
                         $("#names-q1").append(tag);
                     })
                 }
